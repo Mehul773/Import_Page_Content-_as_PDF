@@ -22,19 +22,17 @@ app.post("/convert-to-pdf", async (req, res) => {
   const page = await browser.newPage();
   // Website URL to export as pdf
   const { url } = req.body;
-  console.log(url);
   // Open URL in current page
   await page.goto(url, { waitUntil: "networkidle0" });
   //To reflect CSS used for screens instead of print
   await page.emulateMediaType("screen");
   // Downlaod the PDF
-  const pdf = await page.pdf({
-    path: "result.pdf",
-    margin: { top: "100px", right: "50px", bottom: "100px", left: "50px" },
-    printBackground: true,
-    format: "A4",
-  });
+  const pdf = await page.pdf({ format: "A4", printBackground: true });
+
   // Close the browser instance
   await browser.close();
-  return res.json(null);
+
+  // Send the PDF as a response
+  res.set({ "Content-Type": "application/pdf", "Content-Length": pdf.length });
+  res.send(pdf);
 });
