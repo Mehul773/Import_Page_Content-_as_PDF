@@ -4,13 +4,13 @@
 
 npm i 
 
-npm run dev
+npm start
 
 -> Run in server direcotory
 
 npm i
 
-node .\index.js
+node start
 
 ## HTML to PDF Conversion with Node.js: A Comparative Guide
 
