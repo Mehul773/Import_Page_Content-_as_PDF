@@ -95,3 +95,42 @@ When it comes to converting HTML content into PDF documents in Node.js applicati
 | Community support | Active community support and updates       | Active community support and updates       | Active community support and updates    |
 
 In summary, Puppeteer is ideal for scenarios requiring precise control over PDF content and layout, while jsPDF suits basic client-side PDF generation tasks. On the other hand, PDFKit is perfect for complex server-side PDF generation needs. We can choose the library that best aligns with your project requirements and development expertise.
+
+## Using Commercial APIs:
+
+### DocRaptor:
+**Pros**: Highly accurate rendering, robust handling of modern CSS and JavaScript, reliable cloud service, API and SDKs.
+
+**Cons**: Paid service, may not be cost-effective for low-volume use.
+
+### PDFShift:
+**Pros:** Cloud-based, fast processing, good rendering quality, API and SDKs.
+
+**Cons**: Paid service, pricing may vary depending on usage.
+
+### wkhtmltopdf Cloud:
+**Pros:** Web interface for easy conversion, API access.
+
+**Cons**: May be slower than other paid options, pricing based on usage.
+
+# Choosing the Right Library/API:
+
+Consider these factors:
+
+- **Complexity of web pages:** 
+  - **Puppeteer, WeasyPrint, or DocRaptor:** for intricate layouts.
+  - **jsPDF or simpler open-source libraries:** for basic pages.
+
+- **Control and customization:** 
+  - **Open-source libraries:** offer more control over formatting.
+  - **APIs:** simplify the process.
+
+- **Resource constraints:** 
+  - **jsPDF or pdf-lib:** lightweight options for CPU/memory limitations.
+
+- **Development environment:** 
+  - Choose libraries compatible with your programming language.
+
+- **Budget:** 
+  - **Open-source options:** free.
+  - **Commercial APIs:** wider features and support, but require payment.
