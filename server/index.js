@@ -15,7 +15,7 @@ app.use(
   })
 );
 
-app.post("/convert-to-pdf", async (req, res) => {
+app.post("/convert-to-pdf-puppeteer", async (req, res) => {
   // Create a browser instance
   const browser = await puppeteer.launch();
   // Create a new page

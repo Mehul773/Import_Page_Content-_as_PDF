@@ -1,7 +1,9 @@
 // App.js
 import React, { useState } from "react";
 import axios from "axios";
+import "./App.css";
 import { saveAs } from "file-saver";
+import loadingGif from "../assets/loading.gif"; // Import your loading GIF
 
 const BASE_URL = "http://localhost:5000";
 
@@ -17,7 +19,7 @@ function App() {
 
     try {
       const response = await axios.post(
-        `${BASE_URL}/convert-to-pdf`,
+        `${BASE_URL}/convert-to-pdf-puppeteer`,
         { url },
         { responseType: "arraybuffer" } // tell axios to respond with an array buffer
       );
@@ -36,19 +38,25 @@ function App() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={url}
-          onChange={(event) => setUrl(event.target.value)}
-          placeholder="Enter URL"
-        />
-        <button type="submit" disabled={loading}>
-          {loading ? "Converting..." : "Convert to PDF"}
-        </button>
-      </form>
-      {error && <div>{error}</div>}
+    <div className="flex-box">
+      <div className="container">
+        <form onSubmit={handleSubmit} className="input-form">
+          <input
+            type="url"
+            value={url}
+            onChange={(event) => setUrl(event.target.value)}
+            placeholder="Enter URL"
+          />
+          <button type="submit" disabled={loading} className="btn">
+            {loading ? (
+              <img src={loadingGif} alt="Loading..." /> // Render loading GIF if loading
+            ) : (
+              "Convert to PDF"
+            )}
+          </button>
+        </form>
+        {error && <div>{error}</div>}
+      </div>
     </div>
   );
 }
