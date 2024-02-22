@@ -9,7 +9,6 @@ body{
 }
 .container{
     background-color: rgb(51,45,45);
-    padding: 100px;
     border-radius: 5px;
     color: white;
     width: 400px;
@@ -17,12 +16,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-.flex-box{
+.outer-container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
 }
 .input-form{
     display: flex;
@@ -36,7 +37,6 @@ body{
 
 input{
     width: 100%;
-    cursor: pointer;
     background: transparent;
     border: 1px solid white;
     border-radius: 2px;
@@ -51,4 +51,8 @@ input{
     border-radius: 2px;
     padding: 8px 13px;
     color: white;
+}
+
+.btn:hover{
+    background-color: rgb(56, 52, 52);
 }

@@ -30,6 +30,7 @@ function App() {
       // Use file-saver to save the file
       saveAs(pdfBlob, "output.pdf");
       setLoading(false);
+      setUrl("");
     } catch (error) {
       console.error("Error converting to PDF:", error);
       setError("Error converting to PDF. Please try again later.");
@@ -38,7 +39,7 @@ function App() {
   };
 
   return (
-    <div className="flex-box">
+    <div className="outer-container">
       <div className="container">
         <form onSubmit={handleSubmit} className="input-form">
           <input
@@ -46,6 +47,7 @@ function App() {
             value={url}
             onChange={(event) => setUrl(event.target.value)}
             placeholder="Enter URL"
+            required
           />
           <button type="submit" disabled={loading} className="btn">
             {loading ? (
