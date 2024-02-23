@@ -10,7 +10,7 @@ npm start
 
 npm i
 
-node start
+npm start
 
 ## HTML to PDF Conversion with Node.js: A Comparative Guide
 
