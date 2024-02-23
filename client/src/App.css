@@ -1,58 +1,71 @@
+/* Reset default margin, padding, and box-sizing for all elements */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Apply linear gradient background to the body */
 body{
-    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
 }
+
+/* Styling for the container holding the form */
 .container{
-    background-color: rgb(51,45,45);
-    border-radius: 5px;
-    color: white;
-    width: 400px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    background-color: rgb(51,45,45); 
+    border-radius: 5px; 
+    color: white; 
+    width: 400px; 
+    height: 400px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    margin: 20px 0; 
 }
+
+/* Styling for the outer container, covering the entire viewport */
 .outer-container{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    width: 100vw; 
+    flex-direction: column; 
 }
+
+/* Styling for the form inside the container */
 .input-form{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px 0;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    gap: 10px; 
+    margin: 10px 0; 
 }
 
-
+/* Styling for input field */
 input{
-    width: 100%;
-    background: transparent;
+    width: 250px; 
+    background: transparent; 
     border: 1px solid white;
-    border-radius: 2px;
-    padding: 8px 13px;
-    color: white;
-}
-.btn{
-    width: 100%;
-    cursor: pointer;
-    background: transparent;
-    border: 1px solid white;
-    border-radius: 2px;
-    padding: 8px 13px;
-    color: white;
+    border-radius: 2px; 
+    padding: 8px 13px; 
+    color: white; 
 }
 
+/* Styling for the button */
+.btn{
+    width: 100%; 
+    cursor: pointer; 
+    background: transparent; 
+    border: 1px solid white; 
+    border-radius: 2px; 
+    padding: 8px 13px; 
+    color: white; 
+}
+
+/* Hover effect for the button */
 .btn:hover{
-    background-color: rgb(56, 52, 52);
+    background-color: rgb(56, 52, 52); /* Darker background color on hover */
 }
